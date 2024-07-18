@@ -78,12 +78,12 @@ class Diamond(object):
 
         if model=='ultra_sensitive':
             args = ['diamond','blastx', '-q', origin_file, '-d', self.database_path, '-o', 
-                 output_tsv, '-e', '1E-4', '-k', str(1), '-p', str(self.threads),'--ultra-sensitive', '-f',str(6)]
+                 output_tsv, '-e', '1E-4', '-k', str(1), '-b20', '-p', str(self.threads),'--ultra-sensitive', '-f',str(6)]
         elif model == "makedb":
             args = ['diamond','makedb', '--in', origin_file, '-d', self.database_path]
         else:
             args = ['diamond','blastx', '-q', origin_file, '-d', self.database_path, '-o', 
-                 output_tsv, '-e', '1E-4', '-k', str(1), '-p', str(self.threads),'-f',str(6)]
+                 output_tsv, '-e', '1E-4', '-k', str(1), '-b20', '-p', str(self.threads),'-f',str(6)]
         
         if model != "makedb":
             for a in self.out_type:
