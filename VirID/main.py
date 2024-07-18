@@ -55,8 +55,8 @@ class OptionsParser(object):
             os.remove(os.path.join(assembly_and_basic_annotation_path,"step2_QC_1.fq"))
             os.remove(os.path.join(assembly_and_basic_annotation_path,"step2_QC_2.fq"))
             os.remove(os.path.join(assembly_and_basic_annotation_path,"step3_QC_cdhit_1.fq"))
-            os.remove(os.path.join(assembly_and_basic_annotation_path,"step3_QC_cdhit_1.fq.clstr"))
-            os.remove(os.path.join(assembly_and_basic_annotation_path,"step3_QC_cdhit_1.fq2.clstr"))
+            # os.remove(os.path.join(assembly_and_basic_annotation_path,"step3_QC_cdhit_1.fq.clstr"))
+            # os.remove(os.path.join(assembly_and_basic_annotation_path,"step3_QC_cdhit_1.fq2.clstr"))
             os.remove(os.path.join(assembly_and_basic_annotation_path,"step3_QC_cdhit_2.fq"))
         else:
             os.remove(os.path.join(assembly_and_basic_annotation_path,"step1_QC.fq.gz"))

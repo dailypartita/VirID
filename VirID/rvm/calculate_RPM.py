@@ -51,7 +51,7 @@ class Calculate_RPM(object):
 
         this_table = pd.merge(left = merged_table, right = mapping_Table, 
                               on = 'qseqid', how = "left", sort=True).sort_values(by = ['mapping_Counts'],ascending=False)
-        sankey_path = res_path+"/RPM sankey.html"
+        sankey_path = res_path+"/RPM_sankey.html"
 
         self.sankey(this_table,norRNA_reads,sankey_path)
         all_counts =  this_table['mapping_Counts'].sum()

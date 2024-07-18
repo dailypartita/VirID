@@ -38,8 +38,8 @@ class Rmdup(object):
         env = os.environ.copy()
 
         if len(input_file) == 2:
-            args = ['cd-hit-est', '-i', input_file[0], '-i2', input_file[1], 
-                    '-o', out_file[0],'-o2', out_file[1]]
+            args = ['fastp', '-i', input_file[0], '-I', input_file[1], 
+                    '-o', out_file[0],'-O', out_file[1], '--dedup']
         elif len(input_file) == 1:
             args = ['cd-hit-est', '-i', input_file[0],'-o', out_file[0]]
 
