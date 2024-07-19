@@ -25,11 +25,8 @@ links <- data %>%
   summarise(value = sum(Value)) %>%
   ungroup()
 
-sankey <- sankeyNetwork(Links = links, Nodes = nodes_group, Source = "source", 
-                        Target = "target", Value = "value",numberFormat=".1f",
-                        fontSize = 12, nodeWidth = 30,NodeGroup="group",showNodeValues=FALSE,fontFamily = "Arial",
-                        orderByPath =TRUE,nodeShadow=TRUE,curvature = 0.1,zoom = TRUE,
-                        colourScale = JS("d3.scaleOrdinal(d3.schemeCategory20);"))
-
+sankey <- sankeyNetwork(Links = links, Nodes = nodes_group, Source = "source",
+             Target = "target", Value = "value", NodeID = "name",
+             units = "TWh", fontSize = 12, nodeWidth = 30)
 
 htmlwidgets::saveWidget(sankey, pic_path)
